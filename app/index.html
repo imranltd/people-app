@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>People App</title>
+
+		<script type="text/javascript" src="vendor/angular/angular.js"></script>
+		<script type="text/javascript" src="vendor/lodash/lodash.js"></script>
+		<script type="text/javascript" src="vendor/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.js"></script>
+		<script type="text/javascript" src="vendor/restangular/restangular.js"></script>
+		<script type="text/javascript" src="vendor/angular-ui-router/angular-ui-router.js"></script>
+		
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<div class="container"  id="people-app">
+			<h3>People App</h3>
+			<div class="row">
+				<people-list
+					ng-app="peopleApp"
+					ng-controller="peopleController as vm"
+					class="panel-group" 
+					id="accordian-1" 
+					role="tablist" 
+					aria-multiselectable="true"></people-list>
+			</div><!-- row -->
+		</div><!-- container -->
+		
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/app.service.js"></script>
+		<script type="text/javascript" src="js/app.filter.js"></script>
+		<script type="text/javascript" src="js/app.directive.js"></script>
+		<script type="text/javascript" src="js/app.controller.js"></script>
+
+	</body>
+</html>

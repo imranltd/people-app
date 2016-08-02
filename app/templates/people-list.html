@@ -1,0 +1,56 @@
+
+<div 
+	class="col-xs-12 col-sm-6 col-md-4 col-lg-4"
+	ng-repeat="people in items track by $index">
+	<div class="panel " ng-class="people.isActive?'panel-primary':'panel-default'">
+		<div 
+			class="panel-heading" role="tab" 
+			id="headingOne{{$index}}">
+			<h4 class="panel-title">
+				<a 
+					role="button" data-toggle="collapse" href="#collapse-{{$index}}" aria-expanded="true" aria-controls="collapse-{{$index}}">
+					<img ng-src="{{people.picture}}" alt="{{people.name}}" /> {{people.name}}
+				</a>
+			</h4>
+		</div>
+		<div 
+			id="collapse-{{$index}}" 
+			class="panel-collapse collapse" 
+			role="tabpanel" 
+			aria-labelledby="headingOne{{$index}}">
+			<div class="panel-body">
+				<p>
+					<strong>Age/Gender: </strong>{{people.age}}/{{people.gender}}
+				</p>
+				<p>
+					{{people.about}}
+				</p>
+				<p>
+					<strong>{{people.company}}</strong><br />
+					{{people.address}}<br />		
+					{{people.country}}<br />
+				</p>
+				<p>
+					<strong>Email: </strong>{{people.email}}<br />
+					<strong>Phone: </strong>{{people.phone}}<br />
+					<strong>Date registered: </strong> {{people.registered | formatDate}}<br />
+				</p>
+				<p>	
+					<strong>Balance: </strong>{{people.balance}}<br />
+				</p>
+				<p>
+					<strong>Friends: </strong><br />
+					<span ng-repeat="friend in people.friends track by $index"> 
+						<a href="mailto:{{friend.email}}">{{friend.name}}</a>{{$last ? '' : ', '}}<br />
+					</span>
+				</p>
+				<p>
+					<strong>tags: </strong><br />
+					<span ng-repeat="tag in people.tags track by $index"> 
+						{{tag}}{{$last ? '' : ', '}}
+					</span>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
