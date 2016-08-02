@@ -69,9 +69,6 @@ gulp.task('copyVendorScripts', function() {
 
 	gulp.src('node_modules/restangular/dist/restangular.js')
 		.pipe(gulp.dest('public/vendor/restangular'));
-
-	gulp.src('node_modules/angular-ui-router/release/angular-ui-router.js')
-		.pipe(gulp.dest('public/vendor/angular-ui-router'));
 });
 
 gulp.task('build', ['copyHtml', 'jshint', 'copyVendorScripts', 'sass']);
