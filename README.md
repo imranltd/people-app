@@ -34,6 +34,17 @@ Then run:
 gulp
 ```
 
+### Unit Testing
+
+Using Karma and Jasmine, the tests is currently testing
+* Filters
+
+To run tests in Termninal window run:
+
+```
+karma start
+```
+
 The website should open in a browser new tab/window (http://localhost:3000/)
 
 Live Demo: http://imransarwar.co.uk/people-app/
